@@ -1,0 +1,45 @@
+.skills__card {
+  padding: 24px;
+}
+
+.skills__card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.skills__card > p {
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+/* Chip: tersembunyi dulu, lalu muncul satu per satu */
+.skills__chip {
+  opacity: 0;
+  cursor: default;
+  transition:
+    transform 0.25s var(--ease),
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.is-visible .skills__chip {
+  opacity: 1;
+  animation: chipIn 0.45s var(--ease) calc(var(--j) * 70ms + 350ms) backwards;
+}
+
+@keyframes chipIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(6px);
+  }
+}
+
+/* Hover: terangkat + ganti warna */
+.is-visible .skills__chip:hover {
+  transform: translateY(-3px);
+  background-color: #748ffc;
+  color: #fff;
+}

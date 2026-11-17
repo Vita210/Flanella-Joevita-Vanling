@@ -1,0 +1,132 @@
+.hero {
+  padding: 56px 0 72px;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 4.4vw, 3rem);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.hero__title span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Kotak seleksi */
+.hero__role {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 18px 0 20px 4px;
+  padding: 8px 20px;
+  border: 1.5px solid #748FFC;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  min-height: 52px;
+}
+
+.hero__handle {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  border: 1.5px solid #748FFC;
+}
+.hero__handle--tl { top: -5px; left: -5px; }
+.hero__handle--tr { top: -5px; right: -5px; }
+.hero__handle--bl { bottom: -5px; left: -5px; }
+.hero__handle--br { bottom: -5px; right: -5px; }
+
+.hero__caret {
+  width: 2px;
+  height: 1.2em;
+  margin-left: 3px;
+  background: #748FFC;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.hero__summary {
+  max-width: 430px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+}
+
+/* Wrapper tombol (sesuai contoh) */
+.hero-buttons {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px; /* ruang untuk bayangan tombol 3D */
+}
+
+/* Foto + sosial */
+.hero__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero__photo {
+  width: min(330px, 70vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  overflow: hidden;
+  /* box-shadow: 12px 12px 0px #C9D0FF; */
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero__socials {
+  list-style: none;
+  margin: 0;
+  padding: 22px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  border: 3px solid #748FFC;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.hero__socials li {
+  opacity: 0;
+  animation: fadeUp 0.6s var(--ease) forwards;
+  animation-delay: calc(var(--n) * 120ms + 1000ms);
+}
+
+.hero__socials a {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--ink);
+  transition: transform 0.3s var(--ease), background 0.25s ease, color 0.25s ease;
+}
+.hero__socials a:hover {
+  transform: scale(1.18) rotate(-6deg);
+  background: #B3C4FC;
+  color: #748FFC;
+}
+
+@media (max-width: 991px) {
+  .hero__socials { flex-direction: row; padding: 10px 22px; gap: 14px; }
+}
+
+@media (max-width: 575px) {
+  .hero__visual { flex-direction: column; gap: 20px; }
+}

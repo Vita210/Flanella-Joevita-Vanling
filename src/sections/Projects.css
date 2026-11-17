@@ -1,0 +1,192 @@
+.projects .projects__tabs {
+  gap: 14px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0 2px;
+  margin-bottom: -3px;
+  border-bottom: none;
+  position: relative;
+  z-index: 1;
+  scrollbar-width: none;
+}
+
+.projects .projects__tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.projects .projects__tab {
+  white-space: nowrap;
+  /* teks tab tidak patah jadi dua baris */
+}
+
+.projects .projects__tab {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px 12px 0 0;
+  background: var(--primary-soft);
+  color: var(--secondary);
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s var(--ease);
+}
+
+.projects .projects__tab span {
+  opacity: 0.6;
+  margin-right: 4px;
+}
+
+/* hover hanya untuk tab yang belum aktif */
+.projects .projects__tab:not(.active):hover {
+  background: #d3dbff;
+  color: var(--secondary-dark);
+  transform: translateY(-2px);
+}
+
+.projects .projects__tab.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Lengkungan cekung di kiri & kanan dasar tab aktif */
+.projects .projects__tab.active::before,
+.projects .projects__tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 12px;
+  height: 13px;
+  pointer-events: none;
+}
+
+.projects .projects__tab.active::after {
+  right: -12px;
+  background: radial-gradient(circle at 100% 0, transparent 12px, var(--primary) 12.5px);
+}
+
+.projects .projects__tab.active::before {
+  left: -12px;
+  background: radial-gradient(circle at 0 0, transparent 12px, var(--primary) 12.5px);
+}
+
+/* Tab pertama rata kiri dengan panel, jadi tidak perlu lengkungan kiri */
+.projects .nav-item:first-child .projects__tab.active::before {
+  display: none;
+}
+
+.projects .projects__tab--all {
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-bottom: none;
+}
+
+.projects__panel {
+  padding: 12px;
+  /* ini yang tadinya border 12px */
+  background: var(--primary);
+  border-radius: 0 14px 14px 14px;
+}
+
+.projects__inner {
+  margin: 0;
+  padding: 36px 40px;
+  background: #fff;
+  border-radius: 6px 8px 8px 8px;
+  /* sudut dalam putih ikut membulat */
+  animation: panelIn 0.6s var(--ease);
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.projects__num {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary);
+}
+
+.projects__inner h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 4px 0 14px;
+}
+
+.projects__inner dl {
+  margin: 0 0 10px;
+}
+
+.projects__inner dl div {
+  display: flex;
+  gap: 8px;
+  font-size: 0.8rem;
+}
+
+.projects__inner dt {
+  font-weight: 600;
+  min-width: 42px;
+}
+
+.projects__inner dd {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.projects__desc {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+  max-width: 340px;
+}
+
+.projects__shot {
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #f4f5ff;
+  animation: shotIn 0.7s var(--ease) 0.15s backwards;
+  transition: transform 0.4s var(--ease);
+}
+
+.projects__shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes shotIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .projects__inner {
+    padding: 24px 12px;
+  }
+
+  .projects__panel {
+    border-width: 8px;
+  }
+}
