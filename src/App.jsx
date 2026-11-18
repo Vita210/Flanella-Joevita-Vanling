@@ -11,7 +11,6 @@ function ScrollToHash() {
 
   useEffect(() => {
     if (hash) {
-      // tunggu render halaman selesai dulu
       const t = setTimeout(() => {
         document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: "smooth" });
       }, 60);
@@ -31,7 +30,6 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project" element={<ProjectsPage />} />
           <Route path="/project" element={<ProjectsPage />} />
           <Route path="/design" element={<DesignsPage />} />
         </Routes>

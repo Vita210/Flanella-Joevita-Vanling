@@ -47,7 +47,7 @@ export default function Navbar() {
         <BsNavbar.Toggle aria-controls="main-nav" />
 
         <BsNavbar.Collapse id="main-nav" className="justify-content-end">
-          <Nav className="gap-1">
+          <Nav className="gap-4">
             {NAV_ITEMS.map((item) => (
               <Nav.Link
                 key={item.id}
