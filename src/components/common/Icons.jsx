@@ -22,11 +22,10 @@ export const LinkedinIcon = (p) => (
   </svg>
 );
 
-export const InstagramIcon = (p) => (
+export const MailIcon = (p) => (
   <svg {...base} {...p}>
-    <rect x="3" y="3" width="18" height="18" rx="5" />
-    <circle cx="12" cy="12" r="4" />
-    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    <rect x="3" y="5" width="18" height="14" rx="3" />
+    <path d="m4 7 8 6 8-6" />
   </svg>
 );
 
@@ -66,5 +65,5 @@ export const CloseIcon = (p) => (
 export const SOCIAL_ICONS = {
   github: GithubIcon,
   linkedin: LinkedinIcon,
-  instagram: InstagramIcon,
+  email: MailIcon,
 };

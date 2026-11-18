@@ -8,10 +8,9 @@ export const profile = {
   roles: ["UI/UX Designer", "Frontend Developer"],
   heroSummary:
     "Fresh graduate in Informatics passionate about designing intuitive user experiences and building responsive web interfaces.",
-  cvUrl: "/cv/Flanella-CV.pdf",
+  cvUrl: "https://drive.google.com/file/d/1s5LV35_7CZMsSlPTirYNmw4NVC2C2TCZ/view?usp=sharing",
   heroPhoto: "/images/profile-hero.jpg",
   aboutPhoto: "/images/profile-about.jpg",
-  // Teks "about" dipecah per segmen supaya bagian yang di-highlight bisa diatur dari data
   aboutHeadline: [
     { text: "I'm a fresh Informatics graduate who designs and builds digital products, with a love for " },
     { text: "UI/UX design", highlight: true },
@@ -24,9 +23,9 @@ export const profile = {
 };
 
 export const socialLinks = [
-  { id: 1, platform: "github", url: "https://github.com/", order: 1 },
-  { id: 2, platform: "linkedin", url: "https://www.linkedin.com/", order: 2 },
-  { id: 3, platform: "instagram", url: "https://www.instagram.com/", order: 3 },
+  { id: 1, platform: "github", url: "https://github.com/Vita210", order: 1 },
+  { id: 2, platform: "linkedin", url: "https://www.linkedin.com/in/flanella-joevita-vanling/", order: 2 },
+  { id: 3, platform: "email", url: "mailto:flanellajoevitavanling11@gmail.com", order: 3 },
 ];
 
 /** Teks berjalan di bawah hero. Tabel DB: `focus_areas` */

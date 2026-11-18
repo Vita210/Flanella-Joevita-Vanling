@@ -65,10 +65,15 @@ export default function Hero() {
               <ul className="hero__socials">
                 {(socials ?? []).map((s, i) => {
                   const Icon = SOCIAL_ICONS[s.platform];
-                  if (!Icon) return null;
+                  if (!Icon || !s.url) return null;
+                  const external = !s.url.startsWith("mailto:");
                   return (
                     <li key={s.id} style={{ "--n": i }}>
-                      <a href={s.url} target="_blank" rel="noreferrer" aria-label={s.platform}>
+                      <a
+                        href={s.url}
+                        {...(external && { target: "_blank", rel: "noreferrer" })}
+                        aria-label={s.platform}
+                      >
                         <Icon width={20} height={20} />
                       </a>
                     </li>
