@@ -27,5 +27,5 @@ export const graphicDesigns = [
   { id: 15, order: 15, featured: false, title: "Koleksi Buku Baru Library UAJY", category: "Feeds", image: "/images/graphic/uajy-koleksi.png" },
   { id: 16, order: 16, featured: true, title: "Open Recruitment Student Staff Library UAJY", category: "Feeds", image: "/images/graphic/uajy-openrec.png" },
   { id: 17, order: 17, featured: true, title: "HUT Library UAJY", category: "Feeds", image: "/images/graphic/uajy-ultah.png" },
-  { id: 18, order: 18, featured: true, title: "Tugu UAJY Reading Spot", category: "Others", image: "/images/graphic/uajy-reading-spot.png" },
+  { id: 18, order: 18, featured: false, title: "Tugu UAJY Reading Spot", category: "Others", image: "/images/graphic/uajy-reading-spot.png" },
 ];
