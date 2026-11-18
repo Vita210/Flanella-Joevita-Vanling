@@ -14,8 +14,8 @@ export default function GraphicDesign() {
   const { data: designs } = useGraphicDesigns();
   const [activeId, setActiveId] = useState(null);
 
-  const list = designs ?? [];
-  const featured = list.find((d) => d.id === activeId) ?? list[1] ?? list[0];
+  const list = (designs ?? []).filter((d) => d.featured);
+  const featured = list.find((d) => d.id === activeId) ?? list[0];
   const featuredIndex = featured ? list.indexOf(featured) : 0;
 
   return (

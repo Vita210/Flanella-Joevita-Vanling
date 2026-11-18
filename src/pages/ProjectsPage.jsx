@@ -52,7 +52,7 @@ export default function ProjectsPage() {
           ))}
         </Row>
 
-        {visible.length === 0 && <p className="listing-empty">Belum ada project di kategori ini.</p>}
+        {visible.length === 0 && <p className="listing-empty">No Project To Show</p>}
       </Container>
     </div>
   );

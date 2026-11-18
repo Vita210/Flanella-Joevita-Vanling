@@ -16,118 +16,95 @@ export const projects = [
     tools: ["Figma"],
     description:
       "A mobile salon booking app concept for an Interaction Design course, allowing users to browse services, book appointments, and manage bookings through an intuitive interface.",
-    image: "/images/projects/stelluna.png",
+    image: "/images/projects/Stelluna.png",
     featured: true,
-    detailUrl: "#",
+    links: [
+      { type: "prototype", url: "https://www.figma.com/proto/xfxQ7IfMOz0izAVicebPdd/Stelluna?node-id=316-2412&p=f&viewport=-426%2C-1550%2C0.42&t=g9Y4Zv3vMNPzwTI1-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=548%3A5847&page-id=43%3A254" },
+      { type: "design", url: "https://www.figma.com/design/xfxQ7IfMOz0izAVicebPdd/Stelluna?node-id=43-254&t=Au1iRGUNIQKngxjD-1" },
+    ],
   },
-  // {
-  //   id: 2,
-  //   order: 2,
-  //   slug: "monkland-cheese-dairy",
-  //   title: "Monkland Cheese Dairy",
-  //   subtitle: "UI/UX Redesign",
-  //   categories: ["UI/UX"],
-  //   type: "UI/UX",
-  //   role: "UI/UX Designer", // TODO
-  //   tools: ["Figma"], // TODO
-  //   description:
-  //     "This group project for an Interaction Design course analyzed the Monkland Cheese Dairy website using Gestalt principles.",
-  //   image: "/images/projects/monkland.png",
-  //   featured: false,
-  //   detailUrl: "#",
-  // },
-  // {
-  //   id: 3,
-  //   order: 3,
-  //   slug: "reservation-flow-design",
-  //   title: "Reservation Flow Design",
-  //   subtitle: "Court & Restaurant reservation web",
-  //   categories: ["UI/UX"],
-  //   type: "UI/UX",
-  //   role: "UI/UX Designer", // TODO
-  //   tools: ["Figma"],
-  //   description:
-  //     "A UI/UX technical test project where I designed a reusable reservation layout in Figma.",
-  //   image: "/images/projects/reservation.png",
-  //   featured: false,
-  //   detailUrl: "#",
-  // },
-  // {
-  //   id: 4,
-  //   order: 4,
-  //   slug: "meditalk",
-  //   title: "MediTalk",
-  //   subtitle: "Mobile Learning Platform for ESP",
-  //   categories: ["UI/UX"],
-  //   type: "UI/UX",
-  //   role: "UI/UX Designer", // TODO
-  //   tools: ["Figma"], // TODO
-  //   description:
-  //     "MediTalk is a group project created for a real client, where we designed a mobile learning app prototype based directly on their ESP education needs.",
-  //   image: "/images/projects/meditalk.png",
-  //   featured: false,
-  //   detailUrl: "#",
-  // },
   {
-    id: 5,
-    order: 5,
+    id: 2,
+    order: 2,
     slug: "reuse-mart",
     title: "Reuse Mart",
     subtitle: "Secondhand Goods Selling Platform",
     categories: ["UI/UX", "Web Dev", "App Dev"],
-    type: "Web / App", // TODO
-    role: "UI/UX Designer & Developer", // TODO
-    tools: ["Figma"], // TODO
+    type: "UI/UX, Web & App",
+    role: "UI/UX Designer & Developer",
+    tools: ["Figma"],
     description:
-      "ReuseMart is a group project focused on building a secondhand goods marketplace system, developed in both web and mobile app formats. The platform enables users to buy, sell, and donate used items through a streamlined consignment-based process.",
-    image: "/images/projects/reuse-mart.png",
+      "A web and mobile marketplace system for a group project, allowing users to buy, sell, and donate secondhand goods through an efficient consignment workflow.",
+    image: "/images/projects/Reuse-Mart.png",
     featured: true,
-    detailUrl: "#",
+    links: [
+    ],
   },
   {
-    id: 6,
-    order: 6,
+    id: 3,
+    order: 3,
     slug: "atma-travel",
     title: "Atma Travel",
     subtitle: "Travel Booking App",
     categories: ["UI/UX", "App Dev"],
-    type: "UI/UX & App", // TODO
-    role: "UI/UX Designer & Developer", // TODO
-    tools: ["Figma", "Flutter SDK"], // TODO
+    type: "UI/UX & App",
+    role: "UI/UX Designer & Developer",
+    tools: ["Figma", "Flutter SDK"],
     description:
       "This group project for the Pemrograman Berbasis Platform course involved building a mobile app to help Atma Travel manage bookings, reviews, and customer data.",
-    image: "/images/projects/atma-travel.png",
-    featured: false,
-    detailUrl: "#",
+    image: "/images/projects/Atma-Travel.png",
+    featured: true,
+    links: [
+    ],
   },
   {
-    id: 7,
-    order: 7,
+    id: 4,
+    order: 4,
     slug: "bid-plaza",
     title: "Bid Plaza",
-    subtitle: "TODO subtitle",
-    categories: ["UI/UX", "Web Dev"], // TODO
-    type: "Web / App", // TODO
-    role: "UI/UX Designer & Developer", // TODO
-    tools: ["Figma"], // TODO
-    description: "TODO: tulis deskripsi singkat project Bid Plaza di sini.",
-    image: null,
+    subtitle: "Auction Website",
+    categories: ["UI/UX", "Web Dev"],
+    type: "Web / App",
+    role: "UI/UX Designer & Developer",
+    tools: ["Figma"],
+    description: "An online auction website built for a Web Programming course, allowing users to list products and place bids. Responsible for UI/UX design in Figma, frontend implementation, and Laravel backend with relational database design.",
+    image: "/images/projects/Bid-Plaza.png",
     featured: false,
-    detailUrl: "#",
   },
   {
-    id: 8,
-    order: 8,
-    slug: "SMB-Ananda",
+    id: 5,
+    order: 5,
+    slug: "smb-ananda",
     title: "SMB Ananda",
-    subtitle: "TODO subtitle",
-    categories: ["UI/UX", "Web Dev"], // TODO
-    type: "Web / App", // TODO
-    role: "UI/UX Designer & Developer", // TODO
-    tools: ["Figma", "React"], // TODO
-    description: "TODO: tulis deskripsi singkat project Bid Plaza di sini.",
-    image: null,
+    subtitle: "SMB Ananda Website",
+    categories: ["UI/UX", "Web Dev"],
+    type: "UI/UX & Web",
+    role: "UI/UX Designer & Developer",
+    tools: ["Figma", "React"],
+    description: "A responsive website for Sekolah Minggu Buddha Ananda Lubuklinggau, designed and developed with five core modules: schedules, events, announcements, gallery, and contact. Conducted cross-browser testing and deployed the live site via Vercel.",
+    image: "/images/projects/SMB-Ananda.png",
     featured: true,
-    detailUrl: "#",
+    links: [
+      { type: "design", url: "https://www.figma.com/design/dlVA7PSW4BEolBjwjSoMxI/Kerja-Praktik--Web-Vihara-?node-id=0-1&t=m6bNp4wMlYy7Ub63-1" },
+      { type: "live", url: "https://smb-ananda-llg.vercel.app/" },
+    ],
+  },
+  {
+    id: 6,
+    order: 6,
+    slug: "karya-nusantara",
+    title: "Karya Nusantara",
+    subtitle: "",
+    categories: ["UI/UX", "Web Dev"],
+    type: "UI/UX & Web",
+    role: "UI/UX Designer & Developer",
+    tools: ["Figma", "React"],
+    description: "A landing page for Karya Nusantara built as an internship test, using a modern minimalist design with dark, red, and off-white color-blocking to guide the reader and emphasize key stats and calls to action, while presenting the program as a credible, inclusive platform for young talents.",
+    image: "/images/projects/Karya-Nusantara.png",
+    featured: true,
+    links: [
+      { type: "design", url: "https://www.figma.com/design/qqnGwC8weQd9IrtNJPg4WW/Mahreen-Test?node-id=0-1&t=mucT6O2zQlKBJo6F-1" },
+      { type: "live", url: "https://karya-nusantara-tawny.vercel.app/" },
+    ],
   },
 ];

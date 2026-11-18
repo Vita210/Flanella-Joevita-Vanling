@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Col, Nav, Row } from "react-bootstrap";
+import { getLinks } from "../utils/projectLinks";
 import { useProjects } from "../hooks/usePortfolio";
 import Section from "../components/common/Section";
 import Reveal from "../components/common/Reveal";
@@ -16,6 +17,7 @@ export default function Projects() {
   const list = (projects ?? []).filter((p) => p.featured);
   const active = list.find((p) => p.id === activeId) ?? list[0];
   const activeIndex = active ? list.indexOf(active) : 0;
+  const links = active ? getLinks(active) : [];
 
   return (
     <Section id="projects" label="SELECTED PROJECT" title="Things I've Made" className="projects">
@@ -55,6 +57,21 @@ export default function Projects() {
                 <div><dt>Tools</dt><dd> {active.tools.join(", ")}</dd></div>
               </dl>
               <p className="projects__desc">{active.description}</p>
+              {links.length > 0 && (
+                <div className="projects__links">
+                  {links.map((l, i) => (
+                    <Button
+                      key={l.type}
+                      href={l.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={i === 0 ? "btn-primary-custom" : "btn-secondary"}
+                    >
+                      {l.label}
+                    </Button>
+                  ))}
+                </div>
+              )}
               {/* <Button href={active.detailUrl} className="btn-primary-custom">
                 View Project Detail
               </Button> */}

@@ -95,17 +95,29 @@
   background: #fff;
 }
 
+/* Area lavender tempat poster "dipajang" */
 .gd__poster {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 9 / 10;
+  /* tinggi tetap, apa pun rasio gambarnya */
+  padding: 16px 32px;
+  /* jarak poster ke tepi area lavender */
   border-radius: 8px;
+  background: #edf0fd;
   overflow: hidden;
   animation: posterIn 0.6s var(--ease);
 }
 
+/* Poster tampil utuh di tengah, tidak dipotong */
 .gd__poster img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+/* Placeholder saat gambar belum ada */
+.gd__poster .img-placeholder {
+  border-radius: 10px;
 }
 
 @keyframes posterIn {
