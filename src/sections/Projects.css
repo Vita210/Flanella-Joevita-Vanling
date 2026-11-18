@@ -198,3 +198,27 @@
   padding-bottom: 8px;
   /* ruang untuk bayangan tombol 3D */
 }
+
+/* Garis waktu auto-play di bawah teks tab aktif */
+.projects .projects__progress {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 5px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.85);
+  transform-origin: left;
+  animation: tabProgress 6s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes tabProgress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
