@@ -26,7 +26,7 @@
   height: 54px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #748FFC;
+  border: 2px solid #748ffc;
   flex-shrink: 0;
 }
 
@@ -43,6 +43,7 @@
   font-size: 0.72rem;
 }
 
+/* Thumbnail */
 .gd__thumbcol {
   opacity: 0;
   animation: thumbIn 0.5s var(--ease) forwards;
@@ -97,10 +98,8 @@
 
 /* Area lavender tempat poster "dipajang" */
 .gd__poster {
-  aspect-ratio: 9 / 10;
-  /* tinggi tetap, apa pun rasio gambarnya */
-  padding: 16px 32px;
-  /* jarak poster ke tepi area lavender */
+  aspect-ratio: 9 / 10; /* tinggi tetap, apa pun rasio gambarnya */
+  padding: 16px 32px;   /* jarak poster ke tepi area lavender */
   border-radius: 8px;
   background: #edf0fd;
   overflow: hidden;
@@ -134,6 +133,29 @@
   }
 }
 
+/* Garis waktu auto-play di bawah poster */
+.gd__timer {
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 2px;
+  background: var(--primary-soft);
+  overflow: hidden;
+}
+
+.gd__progress {
+  display: block;
+  height: 100%;
+  background: var(--primary);
+  transform-origin: left;
+  animation: gdProgress 4s linear forwards; /* durasi sebenarnya diatur dari JSX */
+}
+
+@keyframes gdProgress {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Keterangan */
 .gd__caption {
   display: flex;
   justify-content: space-between;
