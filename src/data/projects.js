@@ -2,6 +2,7 @@
  * Tabel DB: `projects` (+ `project_categories` untuk `categories`, `project_tools` untuk `tools`)
  * featured: true -> tampil di tab section "Things I've Made" di Home
  * categories harus cocok dengan nama filter di ProjectsPage: "UI/UX" | "Web Dev" | "App Dev" | "Others"
+ * Links : live, design, prototype, code
  */
 export const projects = [
   {
@@ -70,6 +71,8 @@ export const projects = [
     description: "An online auction website built for a Web Programming course, allowing users to list products and place bids. Responsible for UI/UX design in Figma, frontend implementation, and Laravel backend with relational database design.",
     image: "/images/projects/Bid-Plaza.png",
     featured: false,
+    links: [
+    ],
   },
   {
     id: 5,
@@ -94,7 +97,7 @@ export const projects = [
     order: 6,
     slug: "karya-nusantara",
     title: "Karya Nusantara",
-    subtitle: "",
+    subtitle: "Young Talent Platform Website",
     categories: ["UI/UX", "Web Dev"],
     type: "UI/UX & Web",
     role: "UI/UX Designer & Developer",
@@ -105,6 +108,25 @@ export const projects = [
     links: [
       { type: "design", url: "https://www.figma.com/design/qqnGwC8weQd9IrtNJPg4WW/Mahreen-Test?node-id=0-1&t=mucT6O2zQlKBJo6F-1" },
       { type: "live", url: "https://karya-nusantara-tawny.vercel.app/" },
+    ],
+  },
+  {
+    id: 7,
+    order: 7,
+    slug: "absa",
+    title: "Aspec-Based Sentiment Analysis",
+    subtitle: "E-Commerce Reviews with NER Approach",
+    categories: ["Others"],
+    type: "AI / Machine Learning",
+    role: "AI Engineer",
+    tools: ["Python", "Streamlit"],
+    description:
+      "My final thesis project on aspect-based sentiment analysis of e-commerce reviews using a Named Entity Recognition approach. It identifies the aspects mentioned in each review and the sentiment toward them, and is deployed as an interactive web app.",
+    image: "/images/projects/absa.png",
+    featured: false,
+    links: [
+      { type: "code", url: "https://github.com/Vita210/Tugas_Akhir_NER_220711706" },
+      { type: "live", url: "https://tugasakhirner220711706-2ziothsytxzwenappm2vqbf.streamlit.app/" },
     ],
   },
 ];

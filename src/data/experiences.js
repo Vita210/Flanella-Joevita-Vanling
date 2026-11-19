@@ -45,7 +45,7 @@ export const experiences = [
     startDate: "2024-01-01",
     endDate: "2024-03-31",
     isCurrent: false,
-    organization: "SMB Ananda (Vihara Buddha Dahma Lubuk Linggau)",
+    organization: "SMB Ananda (Vihara Buddha Indonesia Lubuk Linggau)",
     role: "Web Developer",
     description:
       "Gathered requirements from vihara administrators, designed the website in Figma, and built and deployed it with React.js and Vercel.",

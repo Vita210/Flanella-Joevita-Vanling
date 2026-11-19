@@ -213,6 +213,10 @@
   pointer-events: none;
 }
 
+.projects .projects__progress.is-paused {
+  animation-play-state: paused;
+}
+
 @keyframes tabProgress {
   from {
     transform: scaleX(0);

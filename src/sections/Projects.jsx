@@ -21,6 +21,7 @@ const prefersReducedMotion = () =>
 export default function Projects() {
   const { data: projects } = useProjects();
   const [activeId, setActiveId] = useState(null);
+  const [paused, setPaused] = useState(false);
   const [wrapRef, inView] = useInView({ once: false, threshold: 0.3 });
 
   const list = (projects ?? []).filter((p) => p.featured);
@@ -35,7 +36,11 @@ export default function Projects() {
 
   return (
     <Section id="projects" label="SELECTED PROJECT" title="Things I've Made" className="projects">
-      <div ref={wrapRef}>
+      <div
+        ref={wrapRef}
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
         {/* Tab */}
         <Reveal variant="up">
           <Nav
@@ -53,7 +58,7 @@ export default function Projects() {
                   {autoplay && p.id === active?.id && (
                     <i
                       key={p.id}
-                      className="projects__progress"
+                      className={`projects__progress ${paused ? "is-paused" : ""}`}
                       style={{ animationDuration: `${AUTOPLAY_MS}ms` }}
                       onAnimationEnd={goNext}
                       aria-hidden="true"
