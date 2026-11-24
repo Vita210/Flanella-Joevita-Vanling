@@ -19,7 +19,7 @@ export default function About() {
 
   if (!profile) return <section id="about" />;
 
-  // Dihitung dari data, jadi selalu sesuai dengan isi section lain
+  // Jumlah dihitung dari data
   const stats = [
     { value: projects?.length ?? 0, label: "Projects" },
     { value: internships?.length ?? 0, label: "Internships" },
