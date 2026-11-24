@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import { Button, Card, Col, Row } from "react-bootstrap";
-import { useProfile } from "../hooks/usePortfolio";
+import {
+  useCertifications,
+  useExperiences,
+  useProfile,
+  useProjects,
+} from "../hooks/usePortfolio";
 import Section from "../components/common/Section";
 import Reveal from "../components/common/Reveal";
 import SmartImage from "../components/common/SmartImage";
@@ -8,7 +13,18 @@ import "./About.css";
 
 export default function About() {
   const { data: profile } = useProfile();
+  const { data: projects } = useProjects();
+  const { data: internships } = useExperiences("internship");
+  const { data: certs } = useCertifications();
+
   if (!profile) return <section id="about" />;
+
+  // Dihitung dari data, jadi selalu sesuai dengan isi section lain
+  const stats = [
+    { value: projects?.length ?? 0, label: "Projects" },
+    { value: internships?.length ?? 0, label: "Internships" },
+    { value: certs?.length ?? 0, label: "Certificates" },
+  ];
 
   return (
     <Section id="about" label="ABOUT ME" className="about">
@@ -21,7 +37,16 @@ export default function About() {
 
         <Col lg={8} className="d-flex flex-column gap-3">
           <Reveal as={Card} variant="right" delay={100} className="about__card flex-grow-1">
-            <h2 className="about__hello">Hello!</h2>
+            <div className="about__top">
+              <h2 className="about__hello">Hello!</h2>
+              {profile.availability && (
+                <span className="about__status">
+                  <i aria-hidden="true" />
+                  {profile.availability}
+                </span>
+              )}
+            </div>
+
             <p className="about__headline">
               {profile.aboutHeadline.map((seg, i) =>
                 seg.highlight ? (
@@ -34,6 +59,15 @@ export default function About() {
               )}
             </p>
             <p className="about__body">{profile.aboutBody}</p>
+
+            <ul className="about__stats">
+              {stats.map((s) => (
+                <li key={s.label}>
+                  <strong>{s.value}</strong>
+                  <span>{s.label}</span>
+                </li>
+              ))}
+            </ul>
           </Reveal>
 
           <Reveal as={Card} variant="up" delay={250} className="about__cta">
